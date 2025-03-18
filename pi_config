@@ -1,1 +1,4 @@
 sudo apt-get install python3-prometheus-client speedtest-cli
+
+
+python main.py
