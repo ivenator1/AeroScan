@@ -15,7 +15,7 @@ SIGNAL_STRENGTH = Gauge('signal_strength_dbm', 'Signal strength in dBm')
 NETWORK_JITTER = Gauge('network_jitter_ms', 'Network jitter in ms')
 LINK_QUALITY = Gauge('link_quality_percentage', 'Link quality in percentage')
 
-def run_ping(target="8.8.8.8"):
+def run_ping(target="1.1.1.1"):
     """Run a single ping command and update basic Prometheus metrics."""
     try:
         result = subprocess.run(
@@ -38,7 +38,7 @@ def run_ping(target="8.8.8.8"):
     except subprocess.CalledProcessError as e:
         print("Ping command failed:", e)
 
-def run_ping_extended(target="8.8.8.8"):
+def run_ping_extended(target="1.1.1.1"):
     """
     Run ping with 5 packets to calculate jitter.
     
