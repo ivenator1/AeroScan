@@ -35,22 +35,9 @@ UPLOAD_SPEED = Gauge('upload_speed_mbps', 'Upload speed in Mbps')
 SIGNAL_STRENGTH = Gauge('signal_strength_dbm', 'Signal strength of connected network in dBm')
 NETWORK_JITTER = Gauge('network_jitter_ms', 'Network jitter in ms (calculated from 5 packets)')
 LINK_QUALITY = Gauge('link_quality_percentage', 'Link quality of connected network in percentage')
-WIFI_AP_SIGNAL = Gauge(
-    'wifi_ap_signal_strength_dbm',
-    'Signal strength of nearby WiFi APs',
-    ['ssid', 'bssid', 'channel']
-)
-DEVICE_IDENTIFIER = Gauge(
-    'device_unique_identifier',
-    'Unique identifier for the device (SN-Base64Timestamp)',
-    ['identifier']
-)
-# New Gauge for interface IP Address
-NETWORK_INTERFACE_INFO = Gauge(
-    'network_interface_info',
-    'Basic network interface information (IP Address)',
-    ['interface', 'ip_address']
-)
+WIFI_AP_SIGNAL = Gauge('wifi_ap_signal_strength_dbm', 'Signal strength of nearby WiFi APs', ['ssid', 'bssid', 'channel'])
+DEVICE_IDENTIFIER = Gauge('device_unique_identifier', 'Unique identifier for the device (SN-Base64Timestamp)', ['identifier'])
+NETWORK_INTERFACE_INFO = Gauge('network_interface_info', 'Basic network interface information (IP Address)', ['interface', 'ip_address'])
 # --- End Prometheus Gauges ---
 
 # --- Global Variables ---
