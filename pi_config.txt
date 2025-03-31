@@ -1,5 +1,0 @@
-//required packages
-sudo apt-get install python3-prometheus-client speedtest-cli
-
-//to run
-python main.py
